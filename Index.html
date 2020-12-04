@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Hangman</h1>
+<div class="game-container">
+
+
+    <div class="wrong-letters-container">
+        <div id="wrong-letters">
+
+        </div>
+    </div>
+
+    <div class="word" id="word">
+
+    </div>
+</div>
+
+<!--Container for final message-->
+<div class="popup-container" id="popup-container">
+    <div class="popup">
+        <h2 id="final-message">You have Won</h2>
+<!--        <button id="play-button">Play Again</button>-->
+    </div>
+</div>
+
+<!--Notification-->
+<div class="notification-container" id="notification-container">
+    <p>You have already entered this letter</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
