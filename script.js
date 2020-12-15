@@ -5,9 +5,7 @@ const finalMessage = document.getElementById('final-message');
 let selectedWord;
 let correctLetters = []
 
-
 selectedWord = fetchWord()
-
 
 
 // Fetch selected word
@@ -38,8 +36,10 @@ class Word {
 
 setTimeout(()=> {
 
-   const w1 = new Word(selectedWord)
+
+   const w1 = new Word(selectedWord.toLowerCase())
     console.log(w1.getWord())
+
 
 addEventListener('keydown', (e) => {
     let letter = e.key
@@ -67,6 +67,14 @@ function displayWord() {
     }
 }
     displayWord()
+
+    if(selectedWord.includes("-")){
+        correctLetters.push("-")
+        displayWord()
+    } else if (selectedWord.includes("\'")){
+        correctLetters.push("\'")
+        displayWord()
+    }
 
 }, 1000)
 
